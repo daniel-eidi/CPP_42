@@ -7,7 +7,7 @@ RC	= \033[0m
 
 
 NAME =			a.out
-CC = 			clang++
+CC = 			c++
 CFLAGS = 		-Wall -Wextra -Werror -ggdb3 -std=c++98 -I$(INCLUDES)
 
 INCLUDES = ./includes

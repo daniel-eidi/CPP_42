@@ -6,15 +6,13 @@ CY	= \033[36;1m
 RC	= \033[0m
 
 
-NAME =			Zombie
+NAME =			a.out
 CC = 			clang++
 CFLAGS = 		-Wall -Wextra -Werror -ggdb3 -std=c++98 -I$(INCLUDES)
 
 INCLUDES = ./includes
 SRCS_DIR = src
-SRCS_FILES =	Zombie.cpp \
-				zombieHorde.cpp \
-				main.cpp
+SRCS_FILES = main.cpp
 
 OBJS_DIR = ./objs
 

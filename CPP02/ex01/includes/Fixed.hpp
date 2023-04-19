@@ -6,7 +6,7 @@
 /*   By: daeidi-h <daeidi-h@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/28 15:34:09 by daeidi-h          #+#    #+#             */
-/*   Updated: 2023/03/29 15:22:44 by daeidi-h         ###   ########.fr       */
+/*   Updated: 2023/04/17 18:06:23 by daeidi-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,13 +35,13 @@ class Fixed
 
 		float toFloat( void ) const;
 		int toInt (void) const;
+		friend std::ostream & operator << (std::ostream &os, const Fixed &f);
 
 	private:
 		int _raw ;
 		static const int n_bits = 8;
 };
 
-std::ostream &operator << (std::ostream &os, const Fixed &f);
 
 #endif
 

@@ -51,6 +51,6 @@ Zombie* newZombie( std::string name )
 
 void randomChump( std::string name )
 {
-	Zombie random=Zombie(name);
+	Zombie random= Zombie(name);
 	random.announce();
 }

@@ -6,7 +6,7 @@
 /*   By: daeidi-h <daeidi-h@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/28 15:34:09 by daeidi-h          #+#    #+#             */
-/*   Updated: 2023/03/29 17:47:49 by daeidi-h         ###   ########.fr       */
+/*   Updated: 2023/04/17 18:11:06 by daeidi-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ class Fixed
 		bool operator != (const Fixed &f) const;
 		static const Fixed &max (const Fixed &f1, const Fixed &f2);
 		static const Fixed &min (const Fixed &f1, const Fixed &f2);
+		friend std::ostream & operator << (std::ostream &os, const Fixed &f);
 
 		~Fixed();
 
@@ -59,7 +60,6 @@ class Fixed
 		static const int n_bits = 8;
 };
 
-std::ostream &operator << (std::ostream &os, const Fixed &f);
 
 #endif
 

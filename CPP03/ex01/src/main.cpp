@@ -1,37 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Harl.hpp                                           :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: daeidi-h <daeidi-h@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/28 15:34:09 by daeidi-h          #+#    #+#             */
-/*   Updated: 2023/04/17 12:24:05 by daeidi-h         ###   ########.fr       */
+/*   Created: 2023/03/18 14:41:19 by daeidi-h          #+#    #+#             */
+/*   Updated: 2023/03/31 11:39:17 by daeidi-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HARL_HPP
-# define HARL_HPP
-#include <iostream>
-#include <string>
+#include "../includes/ClapTrap.hpp"
+#include "../includes/ScavTrap.hpp"
 
-class Harl 
+int main() 
 {
+	ClapTrap orc("Orc");
 
-	public:
+	orc.attack("Troll");
+	orc.takeDamage(3);
+	orc.beRepaired(1);
 
-		Harl();
+	ScavTrap troll("Troll");
 
-		~Harl();
+	troll.attack("Orc");
+	troll.takeDamage(5);
+	troll.beRepaired(4);
+	troll.guardGate();
 
-		void complain(std::string level);
-
-
-	private:
-		void debug() ;
-		void info() ;
-		void warning() ;
-		void error() ;
-};
-#endif
-
+	return (0);
+}

@@ -6,21 +6,21 @@ CY	= \033[36;1m
 RC	= \033[0m
 
 
-NAME =			Zombie
-CC = 			clang++
-CFLAGS = 		-Wall -Wextra -Werror -ggdb3 -std=c++98 -I$(INCLUDES)
+NAME =			a.out
+CC = 			c++
+CFLAGS = 		-Wall -Wextra -Werror -ggdb3 -std=c++98 
 
 INCLUDES = ./includes
 SRCS_DIR = src
-SRCS_FILES =	Zombie.cpp \
-				zombieHorde.cpp \
+SRCS_FILES =	ClapTrap.cpp\
+				ScavTrap.cpp\
+				FragTrap.cpp\
+				DiamondTrap.cpp\
 				main.cpp
-
-OBJS_DIR = ./objs
+OBJS_DIR = objs
+OBJS = $(addprefix $(OBJS_DIR)/, $(SRCS_FILES:.cpp=.o))
 
 SRCS = 			$(addprefix $(SRCS_DIR)/, $(SRCS_FILES))
-OBJS =          $(SRCS:$(SRCS_DIR)/%.cpp=%.o)
-#OBJS = $(notdir $(SRC:.c=.o))
 
 $(NAME):		$(OBJS)
 				$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
@@ -31,11 +31,13 @@ $(NAME):		$(OBJS)
 #****************************************************************************#
 all:			$(NAME)
 
-$(OBJS): $(SRCS)
+$(OBJS_DIR)/%.o: $(SRCS_DIR)/%.cpp | $(OBJS_DIR)
 	@printf "\n$(CY)Compiling source files...$(RC)\n"
-	mkdir -p $(OBJS_DIR)
-	$(CC) $(CF) -g -c -I ./includes/ $(SRCS)
+	$(CC) $(CFLAGS) -g -I ./includes/ -c $< -o $@
 	@printf "$(GR)Objects ready!$(RC)\n\n"
+
+$(OBJS_DIR):
+	mkdir -p $(OBJS_DIR)
 
 clean:
 				rm -rfd $(OBJS_DIR)
@@ -54,5 +56,5 @@ re:
 
 valgrind: 			$(NAME)
 				@clear
-				@valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes ./$(NAME)
+				@valgrind --leak-check=full --show-leak-kinds=all ./$(NAME)
 

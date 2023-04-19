@@ -4,13 +4,13 @@
 HumanA::HumanA(std::string name, Weapon &weapon)
     : _name(name), _weapon(weapon)
 {
-    std::cout << "\e[0;33mFields Constructor called of HumanA\e[0m" << std::endl;
+    // std::cout << "\e[0;33mFields Constructor called of HumanA\e[0m" << std::endl;
 }
 
 // Destructor
 HumanA::~HumanA()
 {
-    std::cout << "\e[0;31mDestructor called of HumanA\e[0m" << std::endl;
+    // std::cout << "\e[0;31mDestructor called of HumanA\e[0m" << std::endl;
 }
 
 // Getters / Setters

@@ -55,11 +55,3 @@ void randomChump( std::string name )
 	random.announce();
 }
 
-Zombie* zombieHorde( int N, std::string name )
-{
-	Zombie* zombiehorde = new Zombie[N];
-	int i = -1;
-	while (++i < N)
-		zombiehorde[i].setName(name);
-	return(zombiehorde);
-}

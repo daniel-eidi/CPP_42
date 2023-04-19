@@ -6,17 +6,43 @@
 /*   By: daeidi-h <daeidi-h@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/18 14:41:19 by daeidi-h          #+#    #+#             */
-/*   Updated: 2023/04/15 10:26:15 by daeidi-h         ###   ########.fr       */
+/*   Updated: 2023/04/19 12:29:41 by daeidi-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <Zombie.hpp>
+#include "../includes/ClapTrap.hpp"
+#include "../includes/ScavTrap.hpp"
+#include "../includes/FragTrap.hpp"
+#include <DiamondTrap.hpp>
 
-int main(void)
+int main() 
 {
-	Zombie *z0 = newZombie("z0");
-	z0->announce();
-	randomChump("z1");
-	delete z0;
+	ClapTrap orc("Orc");
 
+	orc.attack("Troll");
+	orc.takeDamage(3);
+	orc.beRepaired(1);
+
+	ScavTrap troll("Troll");
+
+	troll.attack("Orc");
+	troll.takeDamage(5);
+	troll.beRepaired(4);
+	troll.guardGate();
+
+	FragTrap frag("Frag");
+
+	frag.attack("Orc");
+	frag.takeDamage(5);
+	frag.beRepaired(4);
+	frag.highFivesGuys();
+
+	DiamondTrap diamond("teste");
+	diamond.attack("someone");
+	diamond.takeDamage(5);
+	diamond.beRepaired(4);
+	diamond.whoAmI();
+
+	
+	return (0);
 }

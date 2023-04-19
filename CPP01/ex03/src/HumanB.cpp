@@ -4,13 +4,13 @@
 HumanB::HumanB(std::string name)
     : _name(name)
 {
-    std::cout << "\e[0;33mFields Constructor called of HumanB\e[0m" << std::endl;
+    // std::cout << "\e[0;33mFields Constructor called of HumanB\e[0m" << std::endl;
 }
 
 // Destructor
 HumanB::~HumanB()
 {
-    std::cout << "\e[0;31mDestructor called of HumanB\e[0m" << std::endl;
+    // std::cout << "\e[0;31mDestructor called of HumanB\e[0m" << std::endl;
 }
 
 // Getters / Setters
