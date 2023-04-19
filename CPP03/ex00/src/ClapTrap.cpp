@@ -6,7 +6,7 @@
 /*   By: daeidi-h <daeidi-h@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/28 12:13:12 by daeidi-h          #+#    #+#             */
-/*   Updated: 2023/03/30 18:36:16 by daeidi-h         ###   ########.fr       */
+/*   Updated: 2023/04/19 17:15:07 by daeidi-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,10 @@
 ClapTrap::ClapTrap()
 {
 	std::cout << "Default ClapTarp created" << std::endl;
+	_name = "Default";
+	_hit_points = 10;
+	_energy_points = 10;
+	_attack_damage = 10;
 }
 
 
@@ -31,7 +35,43 @@ ClapTrap::ClapTrap(std::string name)
 ClapTrap::~ClapTrap()
 {
 	std::cout << _name << " ClapTarp destroyed" << std::endl;
-};
+}
+ClapTrap::ClapTrap(const ClapTrap &copy)
+{
+	std::cout << "Copy constructor called" << std::endl;
+
+	*this = copy;
+}
+
+ClapTrap &ClapTrap::operator = (const ClapTrap &assing)
+{
+	std::cout << "Copy assignment ClapTrap called" << std::endl;
+	_name = assing.getName();
+	_hit_points = assing.getHitPoints();
+	_energy_points = assing.getEnergyPoints();
+	_attack_damage = assing.getAtackDamage();
+	return *this;
+}
+
+std::string ClapTrap::getName( void) const
+{
+	return(_name);
+}
+
+int ClapTrap::getHitPoints( void ) const
+{
+	return(_hit_points);
+}
+
+int ClapTrap::getEnergyPoints( void ) const
+{
+	return(_energy_points);
+}
+
+int ClapTrap::getAtackDamage( void ) const
+{
+	return(_attack_damage);
+}
 
 void ClapTrap::attack(const std::string& target)
 {

@@ -15,11 +15,6 @@
 DiamondTrap::DiamondTrap() : ScavTrap(), FragTrap()
 {
 	std::cout << "Default DiamondTrap created" << std::endl;
-	_name = "Default";
-	ClapTrap::_name = "Default_clap_name";
-	_hit_points = FragTrap::_hit_points;
-	_energy_points = ScavTrap::_energy_points;
-	_attack_damage = FragTrap::_attack_damage;
 }
 
 DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name + "_clap_name") , ScavTrap(name), FragTrap(name)

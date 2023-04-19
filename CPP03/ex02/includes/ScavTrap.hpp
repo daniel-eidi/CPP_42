@@ -6,7 +6,7 @@
 /*   By: daeidi-h <daeidi-h@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/28 15:34:09 by daeidi-h          #+#    #+#             */
-/*   Updated: 2023/03/31 11:52:23 by daeidi-h         ###   ########.fr       */
+/*   Updated: 2023/04/19 16:01:11 by daeidi-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,11 @@ class ScavTrap : public ClapTrap
 
 		ScavTrap();
 		ScavTrap(std::string name);
-		~ScavTrap();
+		ScavTrap(const ScavTrap &copy);
+		ScavTrap & operator =(const ScavTrap &assing);
+		~ScavTrap(void);
 
+		void attack(const std::string& target);
 		void guardGate();
 	private:
 };

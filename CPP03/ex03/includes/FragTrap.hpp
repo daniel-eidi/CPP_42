@@ -6,7 +6,7 @@
 /*   By: daeidi-h <daeidi-h@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/28 15:34:09 by daeidi-h          #+#    #+#             */
-/*   Updated: 2023/04/18 18:35:24 by daeidi-h         ###   ########.fr       */
+/*   Updated: 2023/04/19 17:00:47 by daeidi-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,11 @@ class FragTrap : public virtual ClapTrap
 
 		FragTrap();
 		FragTrap(std::string name);
-		~FragTrap();
+		FragTrap(const FragTrap &copy);
+		FragTrap & operator =(const FragTrap &assing);
+		~FragTrap(void);
 
+		void attack(const std::string& target);
 		void highFivesGuys(void);
 	private:
 };
