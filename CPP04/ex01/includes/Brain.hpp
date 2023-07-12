@@ -21,9 +21,12 @@ class Brain
 		
 		// Getters / Setters
 		std::string *get_ideas() const;
+
+		void insertIdea(std::string newidea);
+		void showIdea();
 		
 	private:
-		std::string *__ideas;
+		std::string _ideas[100];
 		
 };
 

@@ -17,40 +17,29 @@
 #include <Dog.hpp>
 
 
-// int main()
-// {
-// const Animal* meta = new Animal();
-// const Animal* j = new Dog();
-// const Animal* i = new Cat();
-// std::cout << j->getType() << " " << std::endl;
-// std::cout << i->getType() << " " << std::endl;
-// i->makeSound(); //will output the cat sound!
-// j->makeSound();
-// meta->makeSound();
-
-// std::cout << "---------------------" << std::endl;
-
-// const WrongAnimal* wa = new WrongAnimal();
-// const WrongAnimal* wc = new WrongCat();
-// std::cout << wc->getType() << " " << std::endl;
-// wa->makeSound();
-// wc->makeSound(); 
-
-// delete meta;
-// delete wa;
-// delete i;
-// delete j;
-// delete wc;
-
-// return 0;
-
-// }
 
 int main()
 {
-const Animal* j = new Dog();
-const Animal* i = new Cat();
-delete j;//should not create a leak
+	Animal* array[10];
+	for (int i = 0; i < 10; i++) {
+		if (i % 2 == 0)
+			array[i] = new Dog;
+		else
+			array[i] = new Cat;
+	}
+
+	for (int i = 0; i < 10; i++)
+		delete array[i];
+
+//const Animal* j = new Dog();
+const Cat* i = new Cat();
+const Cat* c = new Cat(*i);
+i->showBrain();
+c->insertIdea("teste");
+c->showBrain();
+i->showBrain();
+delete c;//should not create a leak
 delete i;
+//delete j;
 return 0;
 }

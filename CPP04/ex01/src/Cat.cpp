@@ -1,7 +1,7 @@
 #include <Cat.hpp>
 
 // Constructors
-Cat::Cat()
+Cat::Cat() : Animal()
 {
 	std::cout << "\e[0;33mDefault Constructor called of Cat\e[0m" << std::endl;
 	_type = "Cat";
@@ -39,4 +39,15 @@ void Cat::makeSound(void) const
 Brain* Cat::getBrain(void) const
 {
 	return (this->_brain);
+}
+
+
+void Cat::showBrain(void) const
+{
+	_brain->showIdea();
+}
+
+void Cat::insertIdea(std::string newidea) const
+{
+	_brain->insertIdea(newidea);
 }
