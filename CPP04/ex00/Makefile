@@ -12,10 +12,11 @@ CFLAGS = 		-Wall -Wextra -Werror -ggdb3 -std=c++98
 
 INCLUDES = ./includes
 SRCS_DIR = src
-SRCS_FILES =	ClapTrap.cpp\
-				ScavTrap.cpp\
-				FragTrap.cpp\
-				DiamondTrap.cpp\
+SRCS_FILES =	WrongCat.cpp\
+				WrongAnimal.cpp\
+				Cat.cpp\
+				Dog.cpp\
+				Animal.cpp\
 				main.cpp
 OBJS_DIR = objs
 OBJS = $(addprefix $(OBJS_DIR)/, $(SRCS_FILES:.cpp=.o))

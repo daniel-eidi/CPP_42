@@ -6,7 +6,7 @@
 /*   By: daeidi-h <daeidi-h@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/18 14:41:19 by daeidi-h          #+#    #+#             */
-/*   Updated: 2023/04/19 12:29:41 by daeidi-h         ###   ########.fr       */
+/*   Updated: 2023/07/03 13:22:16 by daeidi-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,8 @@ int main()
 	diamond.takeDamage(5);
 	diamond.beRepaired(4);
 	diamond.whoAmI();
+
+	DiamondTrap *test new diamond();
 
 	
 	return (0);
