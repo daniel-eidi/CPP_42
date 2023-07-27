@@ -5,9 +5,10 @@
 	ShrubberyCreationForm::~ShrubberyCreationForm(){};
 	void executeForm();
 
-void 	ShrubberyCreationForm::executeForm()
+void 	ShrubberyCreationForm::execForm(void)
 {
-	std::ofstream file( "_shrubbery" );
+	//const char* fileName = (_target + "_shrubbery").data();
+	std::ofstream file((_target + "_shrubbery").data());
 
 	file <<"                                                         ."<< std::endl;
     file <<"                                          .         ;"<< std::endl;  

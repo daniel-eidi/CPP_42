@@ -70,7 +70,7 @@ void 	AForm::execute(Bureaucrat const & executor)
 			throw(AForm::GradeTooLowException());
 		if(_isSigned == false)
 			throw(std::out_of_range("Form is not signed, can't be executed..."));
-		executeForm();
+		execForm();
 		std::cerr << executor.getName() << " executed " << this->getName() << std::endl;
 	}
 	catch(const std::exception& e)
@@ -80,7 +80,7 @@ void 	AForm::execute(Bureaucrat const & executor)
 	
 }
 
-void 	AForm::executeForm()
+void 	AForm::execForm()
 {
 
 }

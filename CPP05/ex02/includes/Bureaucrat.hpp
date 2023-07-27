@@ -5,7 +5,8 @@
 # include <string>
 # include <exception>
 # include <AForm.hpp>
-# include <ShrubberyCreationForm.hpp>
+
+class AForm;
 
 class Bureaucrat
 {
@@ -41,6 +42,8 @@ class Bureaucrat
 		void decrementGrade();
 
 		void signForm(AForm &form);
+
+		void executeForm(AForm & form);
 
 	private:
 		const std::string  _name ;

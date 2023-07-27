@@ -13,8 +13,8 @@ CFLAGS = 		-Wall -Wextra -Werror -ggdb3 -std=c++98
 INCLUDES = ./includes
 SRCS_DIR = src
 SRCS_FILES =	\
-				AForm.cpp\
 				ShrubberyCreationForm.cpp\
+				AForm.cpp\
 				Bureaucrat.cpp\
 				main.cpp
 OBJS_DIR = objs

@@ -1,5 +1,5 @@
-#ifndef AForm_HPP
-# define AForm_HPP
+#ifndef AFORM_HPP
+# define AFORM_HPP
 
 # include <iostream>
 # include <string>
@@ -41,7 +41,7 @@ class AForm
 		bool	isSigned() const;
 		void	beSigned(const Bureaucrat &signer);
 		void 	execute(Bureaucrat const & executor);
-		virtual void executeForm() = 0;
+		virtual void execForm(void) = 0;
 
 	private:
 		const std::string	_name ;
