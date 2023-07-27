@@ -12,12 +12,8 @@ CFLAGS = 		-Wall -Wextra -Werror -ggdb3 -std=c++98
 
 INCLUDES = ./includes
 SRCS_DIR = src
-SRCS_FILES =	\
-				PresidentialPardonForm.cpp\
-				RobotomyRequestForm.cpp\
-				ShrubberyCreationForm.cpp\
-				AForm.cpp\
-				Bureaucrat.cpp\
+SRCS_FILES =	Bureaucrat.cpp\
+				Form.cpp\
 				main.cpp
 OBJS_DIR = objs
 OBJS = $(addprefix $(OBJS_DIR)/, $(SRCS_FILES:.cpp=.o))

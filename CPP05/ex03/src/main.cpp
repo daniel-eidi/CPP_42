@@ -12,27 +12,30 @@
 
 #include <Bureaucrat.hpp>
 #include <AForm.hpp>
+#include <Intern.hpp>
 #include <PresidentialPardonForm.hpp>
 #include <ShrubberyCreationForm.hpp>
 #include <RobotomyRequestForm.hpp>
 
 int main( void )
 {    
-	
-
 	Bureaucrat bureaucrat1("first",100);
 	Bureaucrat bureaucrat2("second",1);
-	RobotomyRequestForm form("TESTE");
+	Intern someRandomIntern;
+	AForm* form;
+	form = someRandomIntern.makeForm("robotomy request", "Bender");
 	Bureaucrat bureaucrat3("third",9);
-	bureaucrat1.executeForm(form);
-	bureaucrat1.signForm(form);
-	bureaucrat2.signForm(form);
-	bureaucrat3.signForm(form);
-	bureaucrat1.executeForm(form);
-	bureaucrat2.executeForm(form);
-	bureaucrat2.executeForm(form);
-	bureaucrat2.executeForm(form);
-
+	if (form)
+	{
+		bureaucrat1.executeForm(*form);
+		bureaucrat1.signForm(*form);
+		bureaucrat2.signForm(*form);
+		bureaucrat3.signForm(*form);
+		bureaucrat1.executeForm(*form);
+		bureaucrat2.executeForm(*form);
+		bureaucrat2.executeForm(*form);
+		bureaucrat2.executeForm(*form);
+	}
 	//std::cout << form << std::endl;
 
     return 0;

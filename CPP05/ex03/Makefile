@@ -17,6 +17,7 @@ SRCS_FILES =	\
 				RobotomyRequestForm.cpp\
 				ShrubberyCreationForm.cpp\
 				AForm.cpp\
+				Intern.cpp\
 				Bureaucrat.cpp\
 				main.cpp
 OBJS_DIR = objs
