@@ -6,7 +6,7 @@
 /*   By: daeidi-h <daeidi-h@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/20 17:25:49 by daeidi-h          #+#    #+#             */
-/*   Updated: 2023/07/26 09:28:33 by daeidi-h         ###   ########.fr       */
+/*   Updated: 2023/07/31 11:47:47 by daeidi-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int main( void )
 	Bureaucrat bureaucrat2("second",1);
 	Intern someRandomIntern;
 	AForm* form;
-	form = someRandomIntern.makeForm("robotomy request", "Bender");
+	form = someRandomIntern.makeForm("shrubbery creation", "Marco");
 	Bureaucrat bureaucrat3("third",9);
 	if (form)
 	{
