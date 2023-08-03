@@ -6,7 +6,7 @@
 /*   By: daeidi-h <daeidi-h@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/03 16:09:51 by daeidi-h          #+#    #+#             */
-/*   Updated: 2023/08/03 17:34:26 by daeidi-h         ###   ########.fr       */
+/*   Updated: 2023/08/03 19:00:27 by daeidi-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ int main( void )
 	identify(baseRef);
 	identify(base);
 	delete base;
+	delete &baseRef;
 
 	std::cout << "--------Testing Invalid -------------" << std::endl;
 	
@@ -31,7 +32,5 @@ int main( void )
 	identify(baseErrorRef);
 	delete baseError;
 	delete &baseErrorRef;
-	delete base;
-	delete &baseRef;
 	return (0);
 }

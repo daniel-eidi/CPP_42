@@ -6,7 +6,7 @@
 /*   By: daeidi-h <daeidi-h@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/03 16:09:18 by daeidi-h          #+#    #+#             */
-/*   Updated: 2023/08/03 16:09:19 by daeidi-h         ###   ########.fr       */
+/*   Updated: 2023/08/03 18:46:44 by daeidi-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,6 @@
 
 A::~A( void )
 {
+	std::cout << "Destructor A called" << std::endl;
 	return;
 }

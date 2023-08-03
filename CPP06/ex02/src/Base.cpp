@@ -6,7 +6,7 @@
 /*   By: daeidi-h <daeidi-h@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/03 16:10:05 by daeidi-h          #+#    #+#             */
-/*   Updated: 2023/08/03 16:10:06 by daeidi-h         ###   ########.fr       */
+/*   Updated: 2023/08/03 18:47:36 by daeidi-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,6 @@
 
 Base::~Base( void )
 {
+	std::cout << "Destructor BASE called" << std::endl;
 	return;
 }

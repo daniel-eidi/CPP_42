@@ -6,7 +6,7 @@
 /*   By: daeidi-h <daeidi-h@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/03 16:08:59 by daeidi-h          #+#    #+#             */
-/*   Updated: 2023/08/03 17:37:52 by daeidi-h         ###   ########.fr       */
+/*   Updated: 2023/08/03 18:59:35 by daeidi-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 class C : public Base
 {
 	public:
-	virtual ~C( void );
+	~C( void );
 };
 
 #endif
