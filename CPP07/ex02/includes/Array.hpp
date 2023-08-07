@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   array.hpp                                          :+:      :+:    :+:   */
+/*   Array.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: daeidi-h <daeidi-h@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/04 15:27:51 by daeidi-h          #+#    #+#             */
-/*   Updated: 2023/08/07 15:59:41 by daeidi-h         ###   ########.fr       */
+/*   Updated: 2023/08/07 17:56:05 by daeidi-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,11 @@ class Array
 			}
 			std::cout << "Assignation operator called." << std::endl;
 			return (*this);
+		}
+
+		unsingned int size(void)
+		{
+			return this->_size;
 		}
 
 	private:

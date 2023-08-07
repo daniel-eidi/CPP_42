@@ -6,23 +6,40 @@
 /*   By: daeidi-h <daeidi-h@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/20 17:25:49 by daeidi-h          #+#    #+#             */
-/*   Updated: 2023/08/07 12:02:14 by daeidi-h         ###   ########.fr       */
+/*   Updated: 2023/08/07 18:08:42 by daeidi-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "iter.hpp"
 
-int main(void)
+class Awesome
 {
-	int arr_i[] = {100, 200, 300, 400, 500};
-	std::cout << "Int array: " << std::endl;
-	iter(arr_i, 5, &printT);
-	std::cout << std::endl;
+  public:
+    Awesome( void ) : _n( 42 ) { return; }
+    int get( void ) const { return this->_n; }
+  private:
+    int _n;
+};
 
-	char arr_c[] = {'a', 'b', 'c', 'd', 'e', 'f'};
-	std::cout << "Char array: " << std::endl;
-	iter(arr_c, 6, &printT);
-	std::cout << std::endl;
+std::ostream & operator<<( std::ostream & o, Awesome const & rhs )
+{
+  o << rhs.get();
+  return o;
+}
 
-	return 0;
+template< typename T >
+void print( T& x )
+{
+  std::cout << x << std::endl;
+  return;
+}
+
+int main() {
+  int tab[] = { 0, 1, 2, 3, 4 };
+  Awesome tab2[5];
+
+  iter( tab, 5, print<const int> );
+  iter( tab2, 5, print<Awesome> );
+
+  return 0;
 }
